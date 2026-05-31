@@ -1,6 +1,6 @@
-# 🚀 CI/CD Pipeline Project using GitHub, Jenkins, Docker & AWS EC2
+# CI/CD Pipeline Project using GitHub, Jenkins, Docker & AWS EC2
 
-## 📌 Project Overview
+##  Project Overview
 
 This project demonstrates a complete CI/CD pipeline that automatically builds and deploys a Dockerized website using Jenkins whenever code is pushed to GitHub.
 
@@ -8,7 +8,7 @@ The application is containerized using Docker and deployed on an AWS EC2 instanc
 
 ---
 
-## 🛠 Technologies Used
+##  Technologies Used
 
 * GitHub
 * Jenkins
@@ -20,7 +20,7 @@ The application is containerized using Docker and deployed on an AWS EC2 instanc
 
 ---
 
-## 📂 Project Structure
+##  Project Structure
 
 ```text
 capstone-project/
@@ -41,7 +41,7 @@ capstone-project/
 
 ---
 
-## 🏗 Architecture
+##  Architecture
 
 ```text
 Developer
@@ -63,7 +63,7 @@ Website Running
 
 ---
 
-## ⚙️ Docker Configuration
+##  Docker Configuration
 
 The application is containerized using Docker with an Nginx base image.
 
@@ -75,7 +75,7 @@ The Dockerfile:
 
 ---
 
-## 🔄 Jenkins Pipeline Stages
+##  Jenkins Pipeline Stages
 
 ### 1. Clone Repository
 
@@ -113,7 +113,7 @@ Docker Deployment
 
 ---
 
-## 🌐 Deployment
+##  Deployment
 
 The website is deployed on AWS EC2 using Docker containers.
 
@@ -123,7 +123,7 @@ All project files remain safely stored in GitHub.
 
 ---
 
-## ✨ Features
+##  Features
 
 * Automated Deployment
 * CI/CD Pipeline
@@ -135,7 +135,7 @@ All project files remain safely stored in GitHub.
 
 ---
 
-## 📸 Screenshots
+##  Screenshots
 
 ### GitHub Repository
 
@@ -163,7 +163,7 @@ All project files remain safely stored in GitHub.
 
 ---
 
-## 🧪 Verification Commands
+##  Verification Commands
 
 Check running containers:
 
@@ -185,7 +185,7 @@ curl localhost
 
 ---
 
-## 🎯 Conclusion
+##  Conclusion
 
 This project demonstrates a complete CI/CD workflow using GitHub, Jenkins, Docker, and AWS EC2.
 
