@@ -159,7 +159,7 @@ All project files remain safely stored in GitHub.
 
 ### Docker Container Running
 
-
+![Docker Container](screenshots/docker-ps.jpg)
 
 ---
 
