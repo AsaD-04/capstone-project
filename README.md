@@ -1,73 +1,192 @@
-# Capstone Project: CI/CD Pipeline with Jenkins, Docker, GitHub, and AWS EC2
+# 🚀 CI/CD Pipeline Project using GitHub, Jenkins, Docker & AWS EC2
 
-## Project Overview
+## 📌 Project Overview
 
-This project demonstrates a complete CI/CD (Continuous Integration and Continuous Deployment) pipeline using GitHub, Jenkins, Docker, and AWS EC2.
+This project demonstrates a complete CI/CD pipeline that automatically builds and deploys a Dockerized website using Jenkins whenever code is pushed to GitHub.
 
-The application is a static website hosted inside an Nginx Docker container. Jenkins automatically builds and deploys the application on an AWS EC2 instance.
+The application is containerized using Docker and deployed on an AWS EC2 instance. GitHub Webhooks trigger Jenkins automatically for continuous deployment.
 
 ---
 
-## Technologies Used
+## 🛠 Technologies Used
 
 * GitHub
 * Jenkins
 * Docker
 * AWS EC2
 * Nginx
+* GitHub Webhooks
 * Amazon Linux 2023
 
 ---
 
-## Project Architecture
+## 📂 Project Structure
 
-Developer → GitHub → Jenkins → Docker → AWS EC2 → Website
+```text
+capstone-project/
+│
+├── screenshots/
+│   ├── github-repo.png
+│   ├── jenkins-dashboard.png
+│   ├── jenkins-success.png
+│   ├── webhook.png
+│   ├── website.png
+│   └── docker-ps.png
+│
+├── Dockerfile
+├── index.html
+├── Jenkinsfile
+└── README.md
+```
 
 ---
 
-## Project Files
+## 🏗 Architecture
 
-* `index.html` – Website source code
-* `Dockerfile` – Creates Docker image using Nginx
-* `Jenkinsfile` – CI/CD pipeline configuration
-* `README.md` – Project documentation
+```text
+Developer
+   ↓
+GitHub Repository
+   ↓
+GitHub Webhook
+   ↓
+Jenkins Pipeline
+   ↓
+Docker Build
+   ↓
+Deploy Container
+   ↓
+AWS EC2 Instance
+   ↓
+Website Running
+```
 
 ---
 
-## Dockerfile
+## ⚙️ Docker Configuration
 
-The Dockerfile creates an Nginx-based Docker image and copies the website files into the Nginx web directory.
+The application is containerized using Docker with an Nginx base image.
+
+The Dockerfile:
+
+* Uses Nginx image
+* Copies website files into the Nginx web directory
+* Creates a lightweight web server container
 
 ---
 
-## CI/CD Pipeline Stages
+## 🔄 Jenkins Pipeline Stages
 
 ### 1. Clone Repository
 
-Jenkins clones the latest code from the GitHub repository.
+Jenkins clones the latest code from GitHub.
 
 ### 2. Build Docker Image
 
-Jenkins builds a Docker image using the Dockerfile.
+Docker image is built automatically using the Dockerfile.
 
 ### 3. Deploy Container
 
-Jenkins stops the old container (if running), removes it, and deploys the latest version.
+Jenkins:
+
+* Stops previous container
+* Removes old container
+* Deploys latest version automatically
 
 ---
 
-## Features
+## 🔗 Webhook Integration
 
-* Automated deployment using Jenkins
-* Docker containerization
-* Cloud hosting on AWS EC2
-* Version control with GitHub
-* Reusable CI/CD pipeline
+GitHub Webhooks automatically trigger Jenkins whenever code changes are pushed.
+
+Workflow:
+
+```text
+Push Code
+   ↓
+Webhook Trigger
+   ↓
+Jenkins Pipeline
+   ↓
+Docker Deployment
+```
 
 ---
 
-## Outcome
+## 🌐 Deployment
 
-Successfully deployed a website on AWS EC2 using Docker and automated the deployment process using Jenkins Pipeline.
+The website is deployed on AWS EC2 using Docker containers.
 
-This project demonstrates practical DevOps concepts including Continuous Integration, Continuous Deployment, Infrastructure Management, and Containerization.
+Since AWS Educate Sandbox environments are temporary, infrastructure resources such as EC2 instances and public IP addresses may change after session expiration.
+
+All project files remain safely stored in GitHub.
+
+---
+
+## ✨ Features
+
+* Automated Deployment
+* CI/CD Pipeline
+* Docker Containerization
+* Jenkins Automation
+* GitHub Webhook Integration
+* AWS Deployment
+* Continuous Delivery
+
+---
+
+## 📸 Screenshots
+
+### GitHub Repository
+
+![GitHub Repository](screenshots/github-repo.png)
+
+### Jenkins Dashboard
+
+![Jenkins Dashboard](screenshots/jenkins-dashboard.png)
+
+### Successful Jenkins Build
+
+![Jenkins Build](screenshots/jenkins-success.png)
+
+### Webhook Configuration
+
+![Webhook](screenshots/webhook.png)
+
+### Running Website
+
+![Website](screenshots/website.png)
+
+### Docker Container Running
+
+![Docker](screenshots/docker-ps.png)
+
+---
+
+## 🧪 Verification Commands
+
+Check running containers:
+
+```bash
+docker ps
+```
+
+Check Jenkins status:
+
+```bash
+sudo systemctl status jenkins
+```
+
+Check website response:
+
+```bash
+curl localhost
+```
+
+---
+
+## 🎯 Conclusion
+
+This project demonstrates a complete CI/CD workflow using GitHub, Jenkins, Docker, and AWS EC2.
+
+By integrating GitHub Webhooks with Jenkins, deployments become automated, reducing manual effort and enabling continuous delivery practices.
